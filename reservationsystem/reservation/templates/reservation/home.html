@@ -1,0 +1,55 @@
+{% extends '../base.html' %}
+
+{% block 'title' %} Reservations {% endblock %}
+
+{% block 'body' %}
+
+
+<div class="container">
+    <br>
+    <h1>Reservations</h1>
+    <div class="row">
+
+        <div class="col-md">
+
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Rental Name</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Checkin</th>
+                    <th scope="col">Checkout</th>
+                    <th scope="col">Previous reservation ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for reservation, previous_reservation in zipped_reservations %}
+                    <tr>
+                      <th scope="row">{{reservation.rental_id}}</th>
+                      <td>{{reservation.id}}</td>
+                      <td>{{reservation.checkin}}</td>
+                      <td>{{reservation.checkout}}</td>
+                      <td>
+                        {{previous_reservation}}
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>  
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <a href="{% url 'create_rental' %}" class="btn btn-outline-primary btn-lg btn-block">Create New Rental</a>
+        </div>
+        <div class="col-md-6">
+
+            <a href="{% url 'create_reservation' %}" class="btn btn-outline-secondary btn-lg btn-block">Create New Reservation</a>
+        </div>   
+    </div>
+
+</div>
+{% endblock %}

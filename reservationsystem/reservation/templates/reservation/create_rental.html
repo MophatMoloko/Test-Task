@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block 'title' %} Rental Register {% endblock %}
+
+
+{% block 'body' %}
+
+<div class="container">
+    <br>
+    <br>
+    {% if status == '0' %}
+        <div class="alert alert-success" role="alert">
+            Successfully registered
+        </div>
+    {% endif %}
+
+    {% if status == '1' %}
+        <div class="alert alert-danger" role="alert">
+            Rental name must not be empty
+        </div>
+    {% endif %}
+
+    {% if status == '2' %}
+        <div class="alert alert-danger" role="alert">
+            Rental already registered
+        </div>
+    {% endif %}
+
+    {% if status == '3' %}
+        <div class="alert alert-danger" role="alert">
+            Internal Server Error
+        </div>
+    {% endif %}
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md">
+           <h1>Rental</h1>
+           <hr>
+
+           <form method="POST" action="{% url 'validate_create_rental' %}">{% csrf_token %}
+
+                <label>Name</label>
+                <input name="name" class="form-control" type="text" placeholder="Insert the rental name here"> 
+                <br>
+                <input class="btn btn-outline-primary btn-lg" type="submit" value="Register">
+                <a href="{% url 'home' %}" class="btn btn-outline-warning btn-lg">Home</a>
+           </form>
+        </div>
+
+        <div class="col-md-3">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
