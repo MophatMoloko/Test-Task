@@ -38,5 +38,7 @@ Res-5(2022-01-20, 2022-02-11)
 To run, cd to reservationsystem. python manage.py Runserver.
 To test, in the reservationsystem dir, run python manage.py test
 
+Working example
+<img width="906" alt="reservations" src="https://user-images.githubusercontent.com/46231572/209894185-ba4d46ea-fdb7-45ea-bc4f-92bbe324e2f5.png">
 
 
