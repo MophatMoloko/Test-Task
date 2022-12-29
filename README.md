@@ -11,7 +11,6 @@ Reservation
   -checkin(date)
   -checkout(date)
   
-
 Reservation (rental_id, checkin(date), checkout(date))
 
 Add the view with the table of Reservations with "previous reservation ID".
@@ -35,4 +34,9 @@ Res-5(2022-01-20, 2022-02-11)
 |rental-1   |Res-3 ID| 2022-02-20|2022-03-10| Res-2 ID               |
 |rental-2   |Res-4 ID| 2022-01-02|2022-01-20| -                      |
 |rental-2   |Res-5 ID| 2022-01-20|2022-01-11| Res-4 ID               |
+
+To run, cd to reservationsystem. python manage.py Runserver.
+To test, in the reservationsystem dir, run python manage.py test
+
+
 
