@@ -19,7 +19,7 @@
            <h1>Reservation Register</h1>
            <hr>
 
-           <form method="POST" action="{% url 'validate_create_reservation' %}"> {% csrf_token %}
+           <form method="POST"> {% csrf_token %}
             <table>
                 {{ form.as_table }}
             </table>

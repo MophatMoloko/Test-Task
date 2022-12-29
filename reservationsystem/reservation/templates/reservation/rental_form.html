@@ -42,7 +42,7 @@
            <h1>Rental</h1>
            <hr>
 
-           <form method="POST" action="{% url 'validate_create_rental' %}">{% csrf_token %}
+           <form method="POST">{% csrf_token %}
 
                 <label>Name</label>
                 <input name="name" class="form-control" type="text" placeholder="Insert the rental name here"> 
