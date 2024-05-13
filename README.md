@@ -1,6 +1,6 @@
 My Solution to the assigned problem below.
 
-Lets we have a django project.
+Here we have a django project.
 With models:
 
 Rental
